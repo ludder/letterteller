@@ -51,8 +51,6 @@ export default function Home() {
 
         setCountedLetters(countLetters(text));
         setCountedNewLetters(countLetters(newText));
-
-
       },
       [text, newText]
     );
@@ -62,13 +60,13 @@ export default function Home() {
 
       <h1 className='text-4xl text-blue-800 mb-5'>Letterteller</h1>
 
-      <div className="grid grid-cols-2 gap-4 border">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         <div className='flex flex-col gap-4'>
           <textarea onChange={({ target }) => {
             setText(target.value);
           }}
-            className='border border-blue-400 w-96 h-24 p-2'
+            className='border border-blue-400 w-96 h-80 p-2'
             value={text}
           />
 
@@ -93,7 +91,7 @@ export default function Home() {
           <textarea onChange={({ target }) => {
             setNewText(target.value);
           }}
-            className='border border-blue-400 w-96 h-24 p-2'
+            className='border border-blue-400 w-96 h-80 p-2'
             value={newText}
           />
 
