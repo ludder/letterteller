@@ -24,9 +24,9 @@ const LetterWithCount = ({ letter, count, markColor = true }) => {
 }
 
 export default function Home() {
-  const [text, setText] = useState('plak hier de invoertekst');
+  const [text, setText] = useState('');
   const [countedLetters, setCountedLetters] = useState();
-  const [newText, setNewText] = useState('type hier de nieuwe tekst');
+  const [newText, setNewText] = useState('');
   const [countedNewLetters, setCountedNewLetters] = useState();
 
 
@@ -68,6 +68,7 @@ export default function Home() {
           }}
             className='border border-blue-400 w-96 h-80 p-2'
             value={text}
+            placeholder='Plak hier de invoertekst'
           />
 
           <p className='text-sm italic'>
@@ -93,6 +94,7 @@ export default function Home() {
           }}
             className='border border-blue-400 w-96 h-80 p-2'
             value={newText}
+            placeholder='Type hier de nieuwe tekst'
           />
 
           <p className='text-sm italic'>
